@@ -1,9 +1,8 @@
 <template>
   <header>
-    <!-- 
     <nav class="container">
       <div class="branding">
-        <router-link class="header" :to="{ name: 'Home' }">FireBlogs</router-link>
+        <router-link class="header" :to="{ name: 'Home' }">Data Viz</router-link>
       </div>
       <div class="nav-links">
         <ul>
@@ -12,44 +11,9 @@
           <router-link v-if="admin" class="link" :to="{ name: 'CreatePost' }">Create Post</router-link>
           <router-link v-if="!user" class="link" :to="{ name: 'Login' }">Login/Register</router-link>
           
-        </ul>
-        <div v-if="user" :class="{ 'mobile-user-menu': mobile }" @click="toggleProfileMenu" class="profile" ref="profile">
-          <span>{{ this.$store.state.profileInitials }}</span>
-          <div v-show="profileMenu" class="profile-menu">
-            <div class="info">
-              <p class="initials">{{ this.$store.state.profileInitials }}</p>
-              <div class="right">
-                <p>{{ this.$store.state.profileFirstName }} {{ this.$store.state.profileLastName }}</p>
-                <p>{{ this.$store.state.profileUsername }}</p>
-                <p>{{ this.$store.state.profileEmail }}</p>
-              </div>
-            </div>
-            <!-- 
-            <div class="options">
-              <div class="option">
-                <router-link class="option" :to="{ name: 'Profile' }">
-                  <userIcon class="icon" />
-                  <p>Profile</p>
-                </router-link>
-              </div>
-              <div v-if="admin" class="option">
-                <router-link class="option" :to="{ name: 'Admin' }">
-                  <adminIcon class="icon" />
-                  <p>Admin</p>
-                </router-link>
-              </div>
-              <div @click="signOut" class="option">
-                <signOutIcon class="icon" />
-                <p>Sign Out</p>
-              </div>
-            </div>
-            
-          </div>
-        </div>
+        </ul> 
       </div>
-      
     </nav>
-    -->
   </header>
 </template>
 
@@ -131,7 +95,7 @@ export default {
 <style lang="scss" scoped>
 header {
   background-color: #fff;
-  padding: 0 25px;
+  padding: 0 5px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   z-index: 99;
 

@@ -1,10 +1,22 @@
-// import Vue from "vue";
-// import Vuex from "vuex";
-// /*
-// import firebase from "firebase/app";
-// import "firebase/auth";
-// import db from "../firebase/firebaseInit";
-// */
+import { createStore } from 'vuex'
+
+// Create a new store instance.
+export const store = createStore({
+  state () {
+    return {
+      count: 0,
+      postLoaded: true,
+      admin: true,
+      user: true,
+    }
+  },
+  mutations: {
+    increment (state) {
+      state.count++
+    }
+  }
+})
+
 
 // Vue.use(Vuex);
 

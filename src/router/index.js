@@ -1,11 +1,10 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
+import { createRouter, createWebHistory } from 'vue-router'
+
 import HomeView from "../views/HomeView.vue";
 import DataView from "../views/DataView.vue";
+import LoginView from "../views/LoginView.vue";
 //import firebase from "firebase/app";
 //import "firebase/auth";
-
-Vue.use(VueRouter);
 
 const routes = [
   {
@@ -26,16 +25,23 @@ const routes = [
       requiresAuth: false,
     },
   },
+  {
+    path: "/login",
+    name: "LoginView",
+    component: LoginView,
+    meta: {
+      title: "Login",
+      requiresAuth: false,
+    },
+  },
 ];
 
-const router = new VueRouter({
-  mode: "history",
-  base: process.env.BASE_URL,
-  routes,
-  scrollBehavior() {
-    return { x: 0, y: 0 };
-  },
-});
+
+const router = createRouter({
+  // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
+  history: createWebHistory('/'),
+  routes, // short for `routes: routes`
+})
 
 
 router.beforeEach((to, from, next) => {
@@ -43,28 +49,7 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
-/*
-router.beforeEach(async (to, from, next) => {
-  let user = firebase.auth().currentUser;
-  let admin = null;
-  if (user) {
-    let token = await user.getIdTokenResult();
-    admin = token.claims.admin;
-  }
-  if (to.matched.some((res) => res.meta.requiresAuth)) {
-    if (user) {
-      if (to.matched.some((res) => res.meta.requiresAdmin)) {
-        if (admin) {
-          return next();
-        }
-        return next({ name: "Home" });
-      }
-      return next();
-    }
-    return next({ name: "Home" });
-  }
-  return next();
-});
-*/
+export {
+  router,
+}
 
-export default router;
