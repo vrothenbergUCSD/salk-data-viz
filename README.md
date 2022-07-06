@@ -1,6 +1,11 @@
 # salk-data-viz
 
-Data Visualization web app for Satchin Panda Lab at the Salk Institute for Biological Sciences.
+Data Visualization web app for the Satchin Panda Lab at the Salk Institute for Biological Sciences.
+
+Designed for a user-friendly and intuitive discovery of meaningful patterns within RNA Seq data.  
+
+Built with [Vue](https://vuejs.org/guide/introduction.html) and [D3](https://github.com/d3/d3/wiki).  
+
 
 ## Project setup
 ```
