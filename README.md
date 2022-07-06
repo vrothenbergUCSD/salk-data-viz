@@ -1,5 +1,7 @@
 # salk-data-viz
 
+Data Visualization web app for Satchin Panda Lab at the Salk Institute for Biological Sciences.
+
 ## Project setup
 ```
 npm install
