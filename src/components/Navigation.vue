@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <header>
     <nav class="container">
@@ -8,8 +9,10 @@
         <ul>
           <router-link class="link" :to="{ name: 'Home' }">Home</router-link>
           <router-link class="link" :to="{ name: 'Data' }">Data</router-link>
+          <!--
           <router-link v-if="admin" class="link" :to="{ name: 'CreatePost' }">Create Post</router-link>
           <router-link v-if="!user" class="link" :to="{ name: 'Login' }">Login/Register</router-link>
+           -->
           
         </ul> 
       </div>
@@ -23,12 +26,13 @@ import menuIcon from "../assets/Icons/bars-regular.svg";
 import userIcon from "../assets/Icons/user-alt-light.svg";
 import adminIcon from "../assets/Icons/user-crown-light.svg";
 import signOutIcon from "../assets/Icons/sign-out-alt-regular.svg";
+
 import firebase from "firebase/app";
 import "firebase/auth";
 */
 
 export default {
-  name: "NavBar",
+  name: "Navigation",
   components: {
     /*
     menuIcon,
@@ -48,6 +52,7 @@ export default {
   created() {
     //window.addEventListener("resize", this.checkScreen);
     //this.checkScreen();
+    console.log('NavBar created')
   },
   methods: {
     /*
@@ -82,17 +87,18 @@ export default {
   computed: {
     user() {
       //return this.$store.state.user;
-      return 0;
+      return 1;
     },
     admin() {
       //return this.$store.state.profileAdmin;
-      return 0;
+      return 1;
     },
   },
 };
 </script>
 
 <style lang="scss" scoped>
+/* eslint-disable */
 header {
   background-color: #fff;
   padding: 0 5px;
@@ -242,39 +248,6 @@ header {
     width: auto;
   }
 
-  .mobile-nav {
-    padding: 20px;
-    width: 70%;
-    max-width: 250px;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    height: 100%;
-    background-color: #303030;
-    top: 0;
-    left: 0;
 
-    .link {
-      padding: 15px 0;
-      color: #fff;
-    }
-  }
-
-  .mobile-nav-enter-active,
-  .mobile-nav-leave-active {
-    transition: all 1s ease;
-  }
-
-  .mobile-nav-enter {
-    transform: translateX(-250px);
-  }
-
-  .mobile-nav-enter-to {
-    transform: translateX(0);
-  }
-
-  .mobile-nav-leave-to {
-    transform: translateX(-250px);
-  }
 }
 </style>

@@ -1,6 +1,7 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div class="home">
-    <h1>Home</h1>
+  <div class="data">
+    <h1>Data</h1>
     <div>
       {{ test }}
     </div>
@@ -9,7 +10,7 @@
 
 <script>
 export default {
-  name: "HomeView",
+  name: "Data",
   data() {
     return {
       test: 0,
@@ -20,8 +21,9 @@ export default {
 </script>
 
 <style>
+/* eslint-disable vue/multi-word-component-names  */
 
-.home {
+.data {
   font-family:Arial, Helvetica, sans-serif;
   color:#333;
   background-color: #fff;

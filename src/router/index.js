@@ -1,16 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import HomeView from "../views/HomeView.vue";
-import DataView from "../views/DataView.vue";
-import LoginView from "../views/LoginView.vue";
+import Home from "../views/Home.vue";
+import Data from "../views/Data.vue";
+import Login from "../views/Login.vue";
 //import firebase from "firebase/app";
 //import "firebase/auth";
 
 const routes = [
   {
     path: "/",
-    name: "HomeView",
-    component: HomeView,
+    name: "Home",
+    component: Home,
     meta: {
       title: "Home",
       requiresAuth: false,
@@ -18,8 +18,8 @@ const routes = [
   },
   {
     path: "/data",
-    name: "DataView",
-    component: DataView,
+    name: "Data",
+    component: Data,
     meta: {
       title: "Data",
       requiresAuth: false,
@@ -27,13 +27,14 @@ const routes = [
   },
   {
     path: "/login",
-    name: "LoginView",
-    component: LoginView,
+    name: "Login",
+    component: Login,
     meta: {
       title: "Login",
       requiresAuth: false,
     },
   },
+  
 ];
 
 

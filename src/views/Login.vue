@@ -33,7 +33,7 @@ import password from "../assets/Icons/lock-alt-solid.svg";
 // import firebase from "firebase/app";
 // import "firebase/auth";
 export default {
-  name: "LoginView",
+  name: "Login",
   components: {
     email,
     password,
@@ -71,6 +71,7 @@ export default {
 </script>
 
 <style lang="scss">
+/* eslint-disable vue/multi-word-component-names  */
 .form-wrap {
   overflow: hidden;
   display: flex;

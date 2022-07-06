@@ -4,8 +4,6 @@ import { store } from "./store"
 import App from './App.vue'
 //import routes from "./router";
 
-
-
 const app = createApp(App)
 
 // Install the store instance as a plugin

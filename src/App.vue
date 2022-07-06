@@ -1,51 +1,56 @@
 <template>
-  Hello.
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <div class="app">
-    Hey in here.
-    
-    <NavBar/>
-    <img alt="Vue logo" src="./assets/logo.png">
-    
-    <router-view/>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app-wrapper">
+    <div class="app" v-if="this.$store.state.postLoaded">
+      <NavBar/>
+      <router-view/>
+
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import NavBar from './components/NavBar.vue'
+import NavBar from './components/Navigation.vue'
 
 export default {
   name: 'App',
   components: {
     NavBar,
-    HelloWorld,
   },
   watch: {
-    $route() {
-      this.checkRoute();
-    },
   },
+  mounted() {
+    console.log('App mounted')
+  }
 }
 </script>
 
 
 <style lang="scss">
+/* eslint-disable vue/multi-word-component-names  */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Quicksand", sans-serif;
+  //font-family: "Quicksand", sans-serif;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 
 .app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  //display: flex;
+  //flex-direction: column;
+  //min-height: 100vh;
 }
+
 
 
 </style>

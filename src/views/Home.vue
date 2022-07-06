@@ -1,18 +1,23 @@
 <template>
-  <div class="data">
-    <h1>Data</h1>
+  <div class="home">
+    <h1>Home</h1>
     <div>
       {{ test }}
     </div>
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
+import HelloWorld from "../components/HelloWorld.vue"
 export default {
-  name: "DataView",
+  name: "HomeView",
+  components: {
+    HelloWorld,
+  },
   data() {
     return {
-      test: 0,
+      test: "Test string from data",
     }
   }
 
