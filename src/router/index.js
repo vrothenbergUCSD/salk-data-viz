@@ -1,8 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Home from "../views/Home.vue";
-import Data from "../views/Data.vue";
-import Login from "../views/Login.vue";
+import Home from "../views/Home.vue"
+import Data from "../views/Data.vue"
+import Login from "../views/Login.vue"
+import Graph from "../views/Graph.vue"
+import Test from "../views/Test.vue"
 //import firebase from "firebase/app";
 //import "firebase/auth";
 
@@ -31,6 +33,24 @@ const routes = [
     component: Login,
     meta: {
       title: "Login",
+      requiresAuth: false,
+    },
+  },
+  {
+    path: "/graph",
+    name: "Graph",
+    component: Graph,
+    meta: {
+      title: "Graph",
+      requiresAuth: false,
+    },
+  },
+  {
+    path: "/test",
+    name: "Test",
+    component: Test,
+    meta: {
+      title: "Test",
       requiresAuth: false,
     },
   },

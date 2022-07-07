@@ -11,15 +11,23 @@
 <script>
 import NavBar from './components/Navigation.vue'
 
+
 export default {
   name: 'App',
   components: {
     NavBar,
   },
+  data() {
+    return {
+    }
+  },
   watch: {
   },
   mounted() {
     console.log('App mounted')
+  },
+  methods: {
+    
   }
 }
 </script>
@@ -42,7 +50,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0px;
 }
 
 .app {
