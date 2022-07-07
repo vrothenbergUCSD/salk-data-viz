@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div class="test">
+  <div class="text-3xl font-bold">
     <h1>Test</h1>
     <button @click="toggleClass">Toggle</button>
     <br/>
@@ -72,6 +72,7 @@ export default {
 
 <style lang="scss" scoped>
 /* eslint-disable vue/multi-word-component-names  */
+/*
 .test {
   margin-top: 20px;
 }
@@ -79,6 +80,6 @@ export default {
 .circle {
   fill: red;
   stroke:black;
-}
+}*/
 
 </style>
